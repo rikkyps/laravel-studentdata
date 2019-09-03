@@ -1,0 +1,26 @@
+1. Extract file project ini pada path local server kalian (ex: htdocs, www)
+2. Buat database dengan nama bebas (ex: db_laravelapp)
+3. Copy file .env.example pada directory project ini kemudian save dengan filename .env
+4. Ubah configurasi database kalian kemudian sesuaikan ex:
+
+//Before
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=homestead
+DB_USERNAME=homestead
+DB_PASSWORD=secret
+
+//After
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=db_laravelapp
+DB_USERNAME=root
+DB_PASSWORD=
+
+5. Buka terminal kalian pada project path ini kemudian ketikan:
+    php aritsan key:generate
+    php artisan migrate --seed
+
+6. Akses laman aplikasi melalui browser dan pastikan local web server kalian aktif dengan mengetikan ex: localhost/laravelapp/public
